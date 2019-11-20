@@ -3,7 +3,7 @@ body {
   padding: 0px;
   background-color: black;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12pt;
   size: 20pt;
 }
@@ -110,7 +110,6 @@ body {
   padding-top: 10px;
 }
 
-
 .image {
   position: relative;
   margin: auto;
@@ -181,7 +180,7 @@ body {
 }
 
 .f1 {
-  background-color: #38855E;
+  background-color: #38855e;
 }
 
 .espacio {
@@ -189,7 +188,7 @@ body {
   width: 100%;
 }
 .espacio2 {
-   height: 600px;
+  height: 600px;
   width: 100%;
 }
 #countdown {
@@ -201,4 +200,3 @@ body {
   top: 10px;
   width: 100%;
 }
-
