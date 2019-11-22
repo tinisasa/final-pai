@@ -165,12 +165,6 @@ body {
   }
 }
 
-.s1 {
-  top: 50px;
-  height: 500px;
-  width: 100%;
-}
-
 .banner1 {
   background-image: url(https://k61.kn3.net/F/C/9/F/1/9/EA8.jpg);
   background-size: cover;
@@ -199,4 +193,53 @@ body {
   position: fixed;
   top: 10px;
   width: 100%;
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .15em solid red; 
+  white-space: nowrap; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 7s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: red }
+}
+
+
+/* expandable */
+
+#expandable {
+  position: fixed;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.full-height {
+  height: 100vh;
+}
+.half-height {
+  height: 60vh;
+}
+
+#blurred-text {
+  opacity: 0;
+}
+
+.centered-and-still {
+  position: fixed;
+  top: 45vh;
 }

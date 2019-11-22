@@ -34,4 +34,32 @@ var rangeSlider = function () {
 
 rangeSlider();
 
+// expandable text
 
+function scale(num, in_min, in_max, out_min, out_max) {
+  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+$(function() {
+  $(window).scroll(function() {
+    var mass = Math.max(8, 48-0.1*$(this).scrollTop()) + 'px';
+    console.log(($(this).scrollTop()));
+    $('#expandable').css({'font-size': mass, 'line-height': mass});
+    if($(this).scrollTop() > 400) {
+      $('#expandable').addClass('fadeOutUp');
+    };
+    if($(this).scrollTop() > 870) {
+      $('#blurred-text').addClass('fadeIn centered-and-still');
+    }
+    if($(this).scrollTop() > 1000) {
+      var blurValue = scale($(this).scrollTop(), 1000, 1350, 0, 4);
+      $('#blurred-text').css({'filter': 'blur(' + blurValue + 'px)'});
+    }
+    if($(this).scrollTop() > 1350) {
+      $('#blurred-text').addClass('fadeOut');
+    }
+    if($(this).scrollTop() > 1800) {
+      $('#blurred-text').removeClass('centered-and-still');
+    }
+  });
+});
