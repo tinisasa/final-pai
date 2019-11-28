@@ -40,26 +40,37 @@ function scale(num, in_min, in_max, out_min, out_max) {
   return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-$(function() {
-  $(window).scroll(function() {
-    var mass = Math.max(8, 48-0.1*$(this).scrollTop()) + 'px';
+$(function () {
+  $(window).scroll(function () {
+    var mass = Math.max(8, 48 - 0.1 * $(this).scrollTop()) + 'px';
     console.log(($(this).scrollTop()));
-    $('#expandable').css({'font-size': mass, 'line-height': mass});
-    if($(this).scrollTop() > 400) {
+    $('#expandable').css({ 'font-size': mass, 'line-height': mass });
+    if ($(this).scrollTop() > 400) {
       $('#expandable').addClass('fadeOutUp');
     };
-    if($(this).scrollTop() > 870) {
+    if ($(this).scrollTop() > 870) {
       $('#blurred-text').addClass('fadeIn centered-and-still');
     }
-    if($(this).scrollTop() > 1000) {
+    if ($(this).scrollTop() > 1000) {
       var blurValue = scale($(this).scrollTop(), 1000, 1350, 0, 4);
-      $('#blurred-text').css({'filter': 'blur(' + blurValue + 'px)'});
+      $('#blurred-text').css({ 'filter': 'blur(' + blurValue + 'px)' });
     }
-    if($(this).scrollTop() > 1350) {
+    if ($(this).scrollTop() > 1350) {
       $('#blurred-text').addClass('fadeOut');
     }
-    if($(this).scrollTop() > 1800) {
+    if ($(this).scrollTop() > 1800) {
       $('#blurred-text').removeClass('centered-and-still');
     }
   });
 });
+
+function hideMeAndShowNext(elem) {
+  var rowParent = $(elem).parentsUntil(".centered-and-still").parent();
+  rowParent.addClass('fadeOut');
+
+  rowParent.next().css({ 'display': 'block' });
+
+  rowParent.css({ 'display': 'none' });
+
+  rowParent.next().addClass('fadeIn');
+}
