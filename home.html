@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>RUN</title>
 </head>
@@ -16,78 +17,119 @@
 <body>
     <div class="container">
         <!-- Section 1 -->
+        <div class="row">
+            <div class="col full-height">
+                <div id="expandable" class="animated">
+                    El ojo, además de ser un elemento determinante en la expresividad de la persona, es
+                    el órgano que nos proporciona la visión. Su constante contacto con el medio lo expone
+                    permanentemente a todo tipo de agresiones capaces de producir molestias y patologías de distinta
+                    importancia, por lo
+                    requiere de cuidados constantes para preservar su belleza y funcionalidad.
+                    Los ojos y en las zonas perioculares concurren una serie de factores anatómico-fisiológicos que
+                    hacen de estas áreas unas zonas extremadamente frágiles y sensibles.
+                    Son las ventanas al mundo. Nuestros ojos son dos órganos de delicadísima precisión que requieren
+                    cuidados y tratamientos específicos en cada una de las enfermedades que los afectan.
+                    Si bien los ojos son muy delicados los estamos dañando constantemente con el uso de pantallas y
+                    medios tecnológicos.
+                    ¿No viste a que distancia estas leyendo este texto?
+                </div>
+            </div>
+        </div>
+        <!-- Section 2: texto borroso -->
+        <div class="row full-height">
+            <div class="col">
+                <div id="blurred-text" class="animated">
+                    <p>La visión o sentido de la vista es una de las principales capacidades sensoriales de los humanos
+                        y de
+                        muchos otros animales. La más dificil de volver a recuperar </p>
+                </div>
+            </div>
+        </div>
+        <div class="row full-height"></div>
+        <!-- <div class="row full-height"></div> -->
+
+        <!-- Section 3 Ajustes de niveles -->
         <div class="row col-12">
-            <div class="s1">
-                <!-- TODO: Hacer efecto del scroll -->
-                <h3>El ojo, además de ser un elemento determinante en la expresividad de la persona, es el órgano que
-                    nos proporciona la visión. Su constante contacto con el medio lo expone permanentemente a todo tipo
-                    de agresiones físicas, químicas y biológicas capaces de producir molestias y patologías de distinta
-                    importancia, por lo requiere de cuidados constantes para preservar su belleza y funcionalidad</h3>
-                <h4> Además de los factores externos a los que están expuestos, en los ojos y en las zonas perioculares
-                    concurren una serie de factores anatómico-fisiológicos que hacen de estas áreas unas zonas
-                    extremadamente frágiles y sensibles. </h4>
-                <h5> Son las ventanas al mundo. Nuestros ojos son dos órganos de delicadísima precisión que requieren
-                    cuidados y tratamientos específicos en cada una de las enfermedades que los afectan.</h5>
-                <h6>Si bien los ojos son muy delicados los estamos dañando constantemente con el uso de pantallas y
-                    medios tecnologicos. </h6>
-                <h7> ¿No viste a que distancia estas leyendo este texto? <h7>
+            <h1>Ajustes</h1>
+        </div>
+        <div class="col-12">
+            <div class="range-slider">
+                <!-- TODO: Agregar los ajustes y el feedback de ok -->
+                <input class="range-slider__range" type="range" value="10" min="8" max="360">
+                <span class="range-slider__value">10</span>
+                <span style="font-size: 10px;" id="text-change">Aa</span>
             </div>
-            <!-- Section 2 -->
-            <div class="row col-12">
-                <h1>Ajustes</h1>
+
+            <div class="range-slider">
+                <input class="range-slider__range" type="range" value="80" min="0" max="100">
+                <span class="range-slider__value">80</span>
+                <span style="font-size: 72px; color: hsl(0, 0%, 80%);" id="luminance-change">Aa</span>
             </div>
-            <div class="col-12">
-                <div class="range-slider">
-                    <!-- TODO: Agregar los ajustes y el feedback de ok -->
-                    <input class="range-slider__range" type="range" value="10" min="8" max="360">
-                    <span class="range-slider__value">10</span>
-                    <span style="font-size: 10px;" id="text-change">Aa</span>
+
+            <div class="range-slider">
+                <input class="range-slider__range" type="range" value="20" min="0" max="40">
+                <span class="range-slider__value">20</span>
+                <span style="font-size: 72px; color: hsl(20, 100%, 80%);" id="hue-change">Aa</span>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="col-12">
+            <div class="f2">
+                <h1>¿Sabías que ver verde por 20 segundos como descanso ayuda a no viciar la vista?</h1>
+                <!-- TODO: Ver verde me lleva a la vista del arbol tipo https://codepen.io/creativeocean/pen/GRRdgaa -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Ver verde
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="range-slider">
-                    <input class="range-slider__range" type="range" value="80" min="0" max="100">
-                    <span class="range-slider__value">80</span>
-                    <span style="font-size: 72px; color: hsl(0, 0%, 80%);" id="luminance-change">Aa</span>
-                </div>
-
-                <div class="range-slider">
-                    <input class="range-slider__range" type="range" value="20" min="0" max="40">
-                    <span class="range-slider__value">20</span>
-                    <span style="font-size: 72px; color: hsl(20, 100%, 80%);" id="hue-change">Aa</span>
-                </div>
             </div>
-            <!-- Section 3 -->
-            <div class="col-12">
-                <h1>Efectos</h1>
-                <!-- TODO: Elegir una imagen -->
-                <div class="image blur animated"></div>
+        </div>
+        <!-- Section 5 parpadeos de ojos -->
+
+        <!-- Section 6 degrade de la pantall hasta volverse negra -->
+
+
+        <!-- Section final -->
+        <div class="col-12">
+            <h1>Efectos</h1>
+            <!-- TODO: Elegir una imagen -->
+            <div class="image blur animated"></div>
+        </div>
+
+        <div class="row col-12">
+            <div class="typewriter">
+                <h1>Hola, soy Siro... cuidate!</h1>
             </div>
+        </div>
+    </div>
 
-            <!-- Section 4 -->
-            <div class="col-12">
-                <div class="f2">
-                    <h1>¿Sabías que ver verde por 20 segundos como descanso ayuda a no viciar la vista?</h1>
-                    <!-- TODO: Ver verde me lleva a la vista del arbol tipo https://codepen.io/creativeocean/pen/GRRdgaa -->
-                    <a href="page1.html" class="btn btn-primary">Ver verde</a>
-
-                    <!-- TODO: Continuar simplemente sigue -->
-                    <a href="page2.html" class="btn btn-primary">Continuar</a>
-                </div>
-
-            </div>
-
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
-            <script src="js/index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
