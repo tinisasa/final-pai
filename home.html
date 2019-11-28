@@ -15,86 +15,73 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="container" class="container animated">
         <!-- Section 1 -->
         <div class="row">
             <div class="col full-height">
-                <div id="expandable" class="animated">
-                    El ojo, además de ser un elemento determinante en la expresividad de la persona, es
-                    el órgano que nos proporciona la visión. Su constante contacto con el medio lo expone
+                <p id="expandable" class="lead text-center">
+                    El ojo, además de ser un elemento determinante en la expresividad de la persona, <br>
+                    es el órgano que nos proporciona la visión. Su constante contacto con el medio lo expone <br>
                     permanentemente a todo tipo de agresiones capaces de producir molestias y patologías de distinta
-                    importancia, por lo
-                    requiere de cuidados constantes para preservar su belleza y funcionalidad.
-                    Los ojos y en las zonas perioculares concurren una serie de factores anatómico-fisiológicos que
-                    hacen de estas áreas unas zonas extremadamente frágiles y sensibles.
+                    <br>
+                    importancia, por lo que requiere de cuidados constantes para preservar su belleza y funcionalidad.
+                    <br>
+                    Los ojos y en las zonas perioculares concurren una serie de factores anatómico-fisiológicos que <br>
+                    hacen de estas áreas unas zonas extremadamente frágiles y sensibles. <br>
                     Son las ventanas al mundo. Nuestros ojos son dos órganos de delicadísima precisión que requieren
-                    cuidados y tratamientos específicos en cada una de las enfermedades que los afectan.
-                    Si bien los ojos son muy delicados los estamos dañando constantemente con el uso de pantallas y
-                    medios tecnológicos.
-                    ¿No viste a que distancia estas leyendo este texto?
-                </div>
+                    <br>
+                    cuidados y tratamientos específicos en cada una de las enfermedades que los afectan. <br>
+                    Si bien los ojos son muy delicados los estamos dañando constantemente con el uso de pantallas y <br>
+                    medios tecnológicos. <br>
+                    ¿No viste a que distancia estas leyendo este texto? <br>
+                </p>
             </div>
         </div>
         <!-- Section 2: texto borroso -->
         <div class="row full-height">
             <div class="col">
-                <div id="blurred-text" class="animated">
-                    <p>La visión o sentido de la vista es una de las principales capacidades sensoriales de los humanos
+                <div id="blurred-text">
+                    <p class="lead text-center">La visión o sentido de la vista, <br> es una de las principales
+                        capacidades <br>
+                        sensoriales de los humanos
                         y de muchos otros
-                        animales. La más dificil de volver a recuperar </p>
+                        animales. <br> La más dificil de volver a recuperar </p>
                 </div>
             </div>
         </div>
-        <div class="row full-height"></div>
-        <!-- <div class="row full-height"></div> -->
-
         <!-- Section 3 Ajustes de niveles -->
-        <div class="row col-12">
-            <h1>Ajustes</h1>
+        <div id="levelAdjustments" class="row">
+            <div class="col-12">
+                <h2>Ajustes</h2>
+                <div class="range-slider">
+                    <!-- TODO: Agregar los ajustes y el feedback de ok -->
+                    <input class="range-slider__range" type="range" value="10" min="8" max="360">
+                    <span class="range-slider__value">10</span>
+                    <span style="font-size: 10px;" id="text-change">Aa</span>
+                </div>
+
+                <div class="range-slider">
+                    <input class="range-slider__range" type="range" value="80" min="0" max="100">
+                    <span class="range-slider__value">80</span>
+                    <span style="font-size: 72px; color: hsl(0, 0%, 80%);" id="luminance-change">Aa</span>
+                </div>
+
+                <div class="range-slider">
+                    <input class="range-slider__range" type="range" value="20" min="0" max="40">
+                    <span class="range-slider__value">20</span>
+                    <span style="font-size: 72px; color: hsl(20, 100%, 80%);" id="hue-change">Aa</span>
+                </div>
+            </div>
         </div>
-        <div class="col-12">
-            <div class="range-slider">
-                <!-- TODO: Agregar los ajustes y el feedback de ok -->
-                <input class="range-slider__range" type="range" value="10" min="8" max="360">
-                <span class="range-slider__value">10</span>
-                <span style="font-size: 10px;" id="text-change">Aa</span>
-            </div>
-
-            <div class="range-slider">
-                <input class="range-slider__range" type="range" value="80" min="0" max="100">
-                <span class="range-slider__value">80</span>
-                <span style="font-size: 72px; color: hsl(0, 0%, 80%);" id="luminance-change">Aa</span>
-            </div>
-
-            <div class="range-slider">
-                <input class="range-slider__range" type="range" value="20" min="0" max="40">
-                <span class="range-slider__value">20</span>
-                <span style="font-size: 72px; color: hsl(20, 100%, 80%);" id="hue-change">Aa</span>
-            </div>
-        </div>
-
-        <!-- Section 4 -->
-        <div class="col-12">
-            <div class="f2">
-                <h1>¿Sabías que ver verde por 20 segundos como descanso ayuda a no viciar la vista?</h1>
-                <!-- TODO: Ver verde me lleva a la vista del arbol tipo https://codepen.io/creativeocean/pen/GRRdgaa -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Ver verde
-                </button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                            </div>
-
-                        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="full-height d-flex justify-content-center flex-column">
+                    <h2>¿Sabías que ver verde por 20 segundos como descanso ayuda a no viciar la vista?</h2>
+                    <!-- TODO: Ver verde me lleva a la vista del arbol tipo https://codepen.io/creativeocean/pen/GRRdgaa -->
+                    <div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Ver verde
+                        </button>
                     </div>
                 </div>
             </div>
@@ -114,14 +101,31 @@
 
         <!-- Section final -->
         <div class="col-12">
-            <h1>Efectos</h1>
+            <h2>Efectos</h2>
             <!-- TODO: Elegir una imagen -->
-            <div class="image blur animated"></div>
+            <div class="image blur animated lead"></div>
         </div>
 
         <div class="row col-12">
             <div class="typewriter">
                 <h3>Hola, soy Siro... cuidate!</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+
             </div>
         </div>
     </div>

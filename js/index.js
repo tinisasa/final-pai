@@ -41,25 +41,41 @@ function scale(num, in_min, in_max, out_min, out_max) {
 }
 
 $(function () {
+  $('#container').addClass('fadeIn');
+  $(window).scrollTop(0);
   $(window).scroll(function () {
-    var mass = Math.max(8, 48 - 0.1 * $(this).scrollTop()) + 'px';
-    console.log(($(this).scrollTop()));
-    $('#expandable').css({ 'font-size': mass, 'line-height': mass });
-    if ($(this).scrollTop() > 400) {
-      $('#expandable').addClass('fadeOutUp');
+    const zoomValue = scale($(this).scrollTop(), 0, 500, 1, 0);
+    $('#expandable').css({ 'zoom': zoomValue });
+    if ($(this).scrollTop() <= 100) {
+      $('#expandable').css({ 'opacity': 1 });
     };
-    if ($(this).scrollTop() > 870) {
-      $('#blurred-text').addClass('fadeIn centered-and-still');
+    if ($(this).scrollTop() > 100) {
+      const opacityValue = scale($(this).scrollTop(), 100, 300, 1, 0);
+      $('#expandable').css({ 'opacity': opacityValue });
+      $('#blurred-text').css({ 'opacity': 0 });
+    };
+    if ($(this).scrollTop() > 350) {
+      const opacityValue = scale($(this).scrollTop(), 350, 400, 0, 1);
+      $('#blurred-text').addClass('centered-and-still');
+      $('#blurred-text').css({ 'opacity': opacityValue });
     }
-    if ($(this).scrollTop() > 1000) {
-      var blurValue = scale($(this).scrollTop(), 1000, 1350, 0, 4);
+    if ($(this).scrollTop() > 600) {
+      const blurValue = scale($(this).scrollTop(), 600, 800, 0, 4);
       $('#blurred-text').css({ 'filter': 'blur(' + blurValue + 'px)' });
     }
-    if ($(this).scrollTop() > 1350) {
-      $('#blurred-text').addClass('fadeOut');
+    if ($(this).scrollTop() > 800) {
+      const opacityValue = scale($(this).scrollTop(), 800, 1000, 1, 0);
+      $('#blurred-text').css({ 'opacity': opacityValue });
+      $('#levelAdjustments').css({ 'opacity': 0 });
+    }
+    if ($(this).scrollTop() > 1000) {
+      $('#blurred-text').removeClass('centered-and-still');
+      const opacityValue = scale($(this).scrollTop(), 1000, 1200, 0, 1);
+      $('#levelAdjustments').css({ 'opacity': opacityValue });
+
     }
     if ($(this).scrollTop() > 1800) {
-      $('#blurred-text').removeClass('centered-and-still');
+      // $('#blurred-text').removeClass('centered-and-still');
     }
   });
 });
