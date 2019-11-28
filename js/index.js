@@ -15,15 +15,15 @@ var rangeSlider = function () {
     range.on('input', function () {
       $(this).next(value).html(this.value);
       console.log(this.value.toString());
-      if ($(this).siblings(":last").is($('#text-change'))) {
+      if ($(this).is($('#text-change-input'))) {
         console.log('cambio tamaño')
         $('#text-change').css('font-size', this.value.toString() + "px");
       }
-      else if ($(this).siblings(":last").is($('#luminance-change'))) {
+      else if ($(this).is($('#luminance-change-input'))) {
         console.log('cambio luminancia')
         $('#luminance-change').css('color', "hsl(0, 0%, " + this.value.toString() + "%");
       }
-      else if ($(this).siblings(":last").is($('#hue-change'))) {
+      else if ($(this).is($('#hue-change-input'))) {
         console.log('cambio matiz')
         $('#hue-change').css('color', "hsl(" + this.value + ", 50%, 80%");
       }

@@ -12,7 +12,7 @@ body {
 }
 
 .range-slider {
-  margin: 60px 0 0 0%;
+  margin: 60px 0 0 0;
 }
 
 .range-slider {
@@ -23,8 +23,8 @@ body {
   -webkit-appearance: none;
   width: calc(100% - (73px));
   height: 10px;
-  border-radius: 5px;
-  background: #ffff00;
+  border-radius: 2px;
+  background: #ffffff;
   outline: none;
   padding: 0;
   margin: 0;
@@ -35,16 +35,16 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ff0000;
+  background-color: #ffffff;
   cursor: pointer;
-  transition: background 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
 .range-slider__range::-webkit-slider-thumb:hover {
-  background: #aa0000;
+  background: #ffffff;
 }
 
 .range-slider__range:active::-webkit-slider-thumb {
-  background: #aa0000;
+  background: #ffffff;
 }
 
 .range-slider__range::-moz-range-thumb {
@@ -52,28 +52,28 @@ body {
   height: 20px;
   border: 0;
   border-radius: 50%;
-  background: #ff0000;
+  background-color: #ffffff;
   cursor: pointer;
-  transition: background 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .range-slider__range::-moz-range-thumb:hover {
-  background: #aa0000;
+  background: #ffffff;
 }
 
 .range-slider__range:active::-moz-range-thumb {
-  background: #aa0000;
+  background: #ffffff;
 }
 
 .range-slider__range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 3px #ddd, 0 0 0 6px teal;
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #000000, 0 0 0 7px #ffffff;
 }
 
 .range-slider__value {
   display: inline-block;
   position: relative;
   width: 60px;
-  color: #ddd;
+  color: #ffffff;
   line-height: 20px;
   text-align: center;
   border-radius: 3px;
@@ -84,13 +84,13 @@ body {
 
 .range-slider__value:after {
   position: absolute;
-  top: 8px;
-  left: -7px;
+  top: -7px;
+  left: 25px;
   width: 0;
   height: 0;
-  border-top: 7px solid transparent;
-  border-right: 7px solid #0000ff;
-  border-bottom: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #0000ff;
+  border-right: 7px solid transparent;
   content: "";
 }
 
