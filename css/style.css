@@ -264,3 +264,56 @@ body {
   opacity: 0;
   min-height: 100vh;
 }
+
+#myModal,
+.modal-body {
+  overflow: hidden;
+  padding: 0;
+}
+
+.modal-body * {
+  position: absolute;
+  user-select: none;
+}
+
+.modal-content {
+  background: linear-gradient(
+    to top,
+    rgb(255, 234, 211) 5%,
+    rgb(110, 215, 255) 30%,
+    rgb(75, 100, 255) 100%
+  );
+  min-height: 640px;
+}
+
+#ending-text {
+  display: none;
+}
+
+.blink {
+  animation: blink 0.3s linear 0s;
+  -webkit-animation: blink 0.3s linear 0s;
+}
+
+@keyframes blink {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
