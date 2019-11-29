@@ -317,3 +317,11 @@ body {
     transform: rotateX(0deg);
   }
 }
+
+.btn-primary {
+  background-color: #937a3d;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #846e38;
+}
