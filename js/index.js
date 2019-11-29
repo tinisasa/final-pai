@@ -119,6 +119,8 @@ function hideMeAndShowNext(elem) {
   rowParent.next().css({ 'display': 'block' });
   rowParent.css({ 'display': 'none' });
   rowParent.next().addClass('fadeIn');
+  rowParent.next().find("button").css({ 'opacity': 0 })
+  rowParent.next().find("button").addClass('fadeIn');
 }
 
 function isElementInViewport(el) {

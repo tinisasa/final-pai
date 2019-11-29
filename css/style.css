@@ -325,3 +325,7 @@ body {
 .btn-primary:hover {
   background-color: #846e38;
 }
+
+.delay-1 {
+  animation-delay: 1.5s;
+}
